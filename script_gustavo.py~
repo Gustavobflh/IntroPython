@@ -1,0 +1,15 @@
+#Usando o modulo para ler o arquivo e transpor
+
+
+import Gustavos_module as gm
+import matplotlib.pyplot as plt
+
+nome = input("Digite o nome do arquivo que deseja abrir",)
+colunas = gm.ler_arquivo(nome)
+
+for i in range(len(colunas)):
+    data = colunas[i]
+
+    plt.xlabel("altura (m)")
+    plt.hist(colunas[i])
+    plt.show()
